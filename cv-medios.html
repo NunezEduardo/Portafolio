@@ -11,6 +11,38 @@
     <!-- Flag icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ajusta el tamaño de las imágenes de medios */
+        .app-recuerdo {
+            width: 160px;
+            height: auto;
+            display: block;
+            margin: 0 auto 16px auto;
+            border-radius: 8px;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.10);
+            object-fit: cover;
+        }
+        /* Centra el botón debajo de la imagen */
+        .screenshot-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .app-store-link {
+            margin-top: 0;
+            margin-bottom: 10px;
+            padding: 8px 18px;
+            font-size: 1rem;
+            background: #0b5394;
+            color: #fff;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background .2s;
+        }
+        .app-store-link:hover {
+            background: #2471a3;
+        }
+    </style>
 </head>
 
 <body>
@@ -21,7 +53,7 @@
                 <i class="bi bi-house-door-fill"></i>
             </a>
             <div class="app-logo">
-                <img src="img/IMG_20240121_001317_762.jpg"></img>
+                <img src="img/IMG_20240121_001317_762.jpg" alt="Foto Eduardo Núñez">
             </div>
             <br>
             <h3>Eduardo Núñez</h3>
@@ -29,39 +61,30 @@
 
         <div class="box-item app-description" style="grid-column: span 2;">
             <h2>Apariciones Mediáticas</h2>
-            <p>En el marco de mi trabajo he sido reconocido en más de una ocasión en medios nacionales, de mi país Venezuela, siendo estos una entrevista en el Diario El Informador y una nota periodística en el canal de televisión Promar</p>
+            <p>En el marco de mi trabajo he sido reconocido en más de una ocasión en medios nacionales, de mi país Venezuela, siendo estos una entrevista en el Diario El Informador y una nota periodística en Promar TV.</p>
         </div>
         
         <div class="box-item app-screenshots" style="grid-column: span 2; grid-row: span 2;">
             <h3>Portada El Informador</h3>
             <div class="screenshot-container">
                 <img src="img/medios/1762202643227.jpeg" alt="Portada El Informador" class="app-recuerdo">
-                <br>
-                <a href="https://www.instagram.com/reel/DQkmBs7jSa-/?utm_source=ig_web_copy_link" class="app-store-link">
-                Ver Entrevista
-            </a>
+                <a href="https://www.instagram.com/reel/DQkmBs7jSa-/?utm_source=ig_web_copy_link" class="app-store-link" target="_blank">
+                    Ver Entrevista
+                </a>
             </div>
-            </div>
+        </div>
 
-            <div class="box-item app-screenshots" style="grid-column: span 2; grid-row: span 2;">
-            <h3>Nota Peridística Promar TV</h3>
+        <div class="box-item app-screenshots" style="grid-column: span 2; grid-row: span 2;">
+            <h3>Nota Periodística Promar TV</h3>
             <div class="screenshot-container">
-                <img src="img/medios/image.png" alt="Nota Peridística Promar TV" class="app-recuerdo">
-                <br>
-                <a href="https://www.linkedin.com/posts/nunezeduardo_parkandson-innovaciaejnsocial-tecnologaedaconpropaejsito-activity-7391578451104833536-FWQG?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFhV68kB9wDEgoG_b2voNngCGtwu8Gb-2JA" class="app-store-link">
-                Ver Nota
-            </a>
+                <img src="img/medios/image.png" alt="Nota Periodística Promar TV" class="app-recuerdo">
+                <a href="https://www.linkedin.com/posts/nunezeduardo_parkandson-innovaciaejnsocial-tecnologaedaconpropaejsito-activity-7391578451104833536-FWQG?utm_source=social_share_send&utm_medium=android_app" class="app-store-link" target="_blank">
+                    Ver Nota
+                </a>
             </div>
         </div>
     </div>
 
     <script src="scripts/themeswitch.js"></script>
 </body>
-
 </html>
-
-
-
-
-
-
