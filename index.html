@@ -14,7 +14,7 @@
     <style>
         .language-list {
             display: flex;
-            gap: 20px;
+            gap: 18px;
             padding-left: 0;
             list-style: none;
         }
@@ -24,57 +24,40 @@
             align-items: center;
             justify-content: center;
             text-decoration: none;
+            width: 35px;
+            height: 35px;
+        }
+        .language-link .fi {
+            font-size: 1.75rem;
+            padding: 0;
+            margin: 0;
         }
         .level-circle {
             position: absolute;
-            bottom: -5px;
-            right: -10px;
-            width: 24px;
-            height: 24px;
+            bottom: 2px;
+            right: 2px;
+            width: 17px;
+            height: 17px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.9rem;
+            font-size: 0.62rem;
             font-weight: bold;
             color: white;
-            border: 2px solid #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            border: 1.7px solid #fff;
+            letter-spacing: 0.5px;
             z-index: 2;
         }
         .level-a {
-            background: orange;
+            background: linear-gradient(135deg, #ff9900 80%, #ffb84d 100%);
         }
         .level-b {
-            background: green;
+            background: linear-gradient(135deg, #229955 80%, #5ada89 100%);
         }
         .level-c {
-            background: #0066cc;
-        }
-        .language-popup {
-            position: absolute;
-            top: 36px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #222;
-            color: #fff;
-            padding: 8px 16px;
-            border-radius: 10px;
-            font-size: 0.95rem;
-            white-space: nowrap;
-            display: none;
-            z-index: 10;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-        .language-link .fi {
-            font-size: 2rem;
-        }
-        .language-link.active .language-popup {
-            display: block;
-            animation: fadeIn 0.3s;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.8); }
-            to { opacity: 1; transform: scale(1); }
+            background: linear-gradient(135deg, #066edb 80%, #57a9fd 100%);
         }
     </style>
 </head>
@@ -160,21 +143,18 @@
                     <a href="#" class="language-link" data-lang="es" data-level="C1">
                         <span class="fi fi-ve"></span>
                         <span class="level-circle level-c">C1</span>
-                        <span class="language-popup">Español nativo (C1). Comunicación profesional y cotidiana fluida.</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="language-link" data-lang="us" data-level="B2">
                         <span class="fi fi-us"></span>
                         <span class="level-circle level-b">B2</span>
-                        <span class="language-popup">Inglés avanzado (B2). Competencia para proyectos y trabajo en equipo técnico.</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="language-link" data-lang="fr" data-level="A2">
                         <span class="fi fi-fr"></span>
                         <span class="level-circle level-a">A2</span>
-                        <span class="language-popup">Francés intermedio (A2). Comunicación básica y comprensión general.</span>
                     </a>
                 </li>
             </ul>
@@ -227,21 +207,7 @@
                 popup.classList.remove('show');
             }, 3000);
         });
-
-        // Language popup logic
-        document.querySelectorAll('.language-link').forEach(link => {
-            link.addEventListener('click', function(e){
-                e.preventDefault();
-                // Remove active from all
-                document.querySelectorAll('.language-link').forEach(l => l.classList.remove('active'));
-                // Add active to current
-                link.classList.add('active');
-                // Hide after 3 seconds
-                setTimeout(() => {
-                    link.classList.remove('active');
-                }, 3000);
-            });
-        });
+        // Ya no hay lógica de popups de idioma
     </script>
 </body>
 </html>
