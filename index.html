@@ -11,55 +11,6 @@
     <!-- Flag icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .language-list {
-            display: flex;
-            gap: 18px;
-            padding-left: 0;
-            list-style: none;
-        }
-        .language-link {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            width: 35px;
-            height: 35px;
-        }
-        .language-link .fi {
-            font-size: 1.75rem;
-            padding: 0;
-            margin: 0;
-        }
-        .level-circle {
-            position: absolute;
-            bottom: 2px;
-            right: 2px;
-            width: 17px;
-            height: 17px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.62rem;
-            font-weight: bold;
-            color: white;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-            border: 1.7px solid #fff;
-            letter-spacing: 0.5px;
-            z-index: 2;
-        }
-        .level-a {
-            background: linear-gradient(135deg, #ff9900 80%, #ffb84d 100%);
-        }
-        .level-b {
-            background: linear-gradient(135deg, #229955 80%, #5ada89 100%);
-        }
-        .level-c {
-            background: linear-gradient(135deg, #066edb 80%, #57a9fd 100%);
-        }
-    </style>
 </head>
 
 <body>
@@ -139,24 +90,9 @@
         <div class="box-item languages">
             <h2>Idiomas</h2>
             <ul class="language-list">
-                <li>
-                    <a href="#" class="language-link" data-lang="es" data-level="C1">
-                        <span class="fi fi-ve"></span>
-                        <span class="level-circle level-c">C1</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="language-link" data-lang="us" data-level="B2">
-                        <span class="fi fi-us"></span>
-                        <span class="level-circle level-b">B2</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="language-link" data-lang="fr" data-level="A2">
-                        <span class="fi fi-fr"></span>
-                        <span class="level-circle level-a">A2</span>
-                    </a>
-                </li>
+                <li><a href="" class="language-link" data-lang="es"><span class="fi fi-ve"></span></a></li>
+                <li><a href="" class="language-link" data-lang="us"><span class="fi fi-us"></span></a></li>
+                <li><a href="" class="language-link" data-lang="fr"><span class="fi fi-fr"></span></a></li>
             </ul>
         </div>
 
@@ -198,16 +134,18 @@
 
     <script src="scripts/themeswitch.js" defer></script>
     <script>
-        // Email popup
         document.getElementById('email-link').addEventListener('click', function(e) {
             e.preventDefault();
             const popup = document.getElementById('email-popup');
             popup.classList.toggle('show');
+            
+            // Ocultar el popup después de 3 segundos
             setTimeout(() => {
                 popup.classList.remove('show');
             }, 3000);
         });
-        // Ya no hay lógica de popups de idioma
     </script>
 </body>
+
+
 </html>
