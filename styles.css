@@ -771,11 +771,10 @@ body.dark-theme .certificate p {
     width: 22px;
     height: 22px;
     line-height: 22px;
-    font-size: 14px;
+    font-size: 12px;
     border-radius: 50%;
     color: #fff;
     text-align: center;
-    font-weight: bold;
     box-shadow: 0 0 1px #3332;
     border: 2px solid #fff;
     z-index: 2;
@@ -785,3 +784,4 @@ body.dark-theme .certificate p {
 .level-a1, .level-a2 { background: orange; }
 .level-b1, .level-b2 { background: forestgreen; }
 .level-c1, .level-c2 { background: #1565c0; }
+
