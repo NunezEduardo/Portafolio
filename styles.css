@@ -750,4 +750,38 @@ body.dark-theme .certificate h3 {
 
 body.dark-theme .certificate p {
     color: #b0b0b0;
+
 }
+
+.language-list {
+    position: relative;
+}
+
+.language-link {
+    position: relative;
+    display: inline-block;
+    margin: 0 8px;
+}
+
+/* El circulito con el nivel */
+.language-level {
+    position: absolute;
+    top: 0px;
+    right: -10px;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 14px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 0 1px #3332;
+    border: 2px solid #fff;
+    z-index: 2;
+}
+
+/* Colores según el nivel */
+.level-a1, .level-a2 { background: orange; }
+.level-b1, .level-b2 { background: forestgreen; }
+.level-c1, .level-c2 { background: #1565c0; }
