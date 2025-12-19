@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Asegurar que los motores de búsqueda puedan rastrear activos visuales y de estilo
+Allow: /styles.css
+Allow: /scripts/
+Allow: /img/
+
+# Evitar la indexación de archivos que no son parte de la experiencia de usuario
+Disallow: /README.md
